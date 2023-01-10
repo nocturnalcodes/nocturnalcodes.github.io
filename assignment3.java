@@ -1,0 +1,63 @@
+import java.util.Scanner; //import scanner
+
+    public class BraggsMariyah_Assignment3 {
+
+	    public static void main(String[] args) {
+	    	
+	    	//create scanner for user input
+	    	Scanner scanstr = new Scanner(System.in); //for gamer name
+	    	Scanner scanint = new Scanner(System.in); //for xp levels
+	    	
+	    	//welcome message
+	    	System.out.println("Welcome to the Total XP calculation program!");
+	    	
+	    	//ask the user if they want to enter gamer's data
+	    	System.out.print("Would you like to enter a gamer's data? Enter Yes/No: ");
+	    	String gamer_data = scanstr.nextLine();
+	    	
+	    	//create if statement if user enters Yes
+	    	while (gamer_data.equals("Yes")) {
+
+		    	//prompt the user for gamer's name
+		    	System.out.print("Please enter your gamer's name: ");
+		    	String gamer_name = scanstr.nextLine();
+		    	
+		    	//prompt the user for level 1 xp
+		    	System.out.print("Please enter your level 1 XP as a whole number: ");
+		    	int l1_xp = scanint.nextInt();
+		    	
+		    	//prompt the user level 2 xp
+		    	System.out.print("Please enter your level 2 XP as a whole number: ");
+		    	int l2_xp = scanint.nextInt();
+		    	
+		    	//prompt the user for level 3 xp
+		    	System.out.print("Please enter your level 3 XP as a whole number: ");
+		    	int l3_xp = scanint.nextInt();
+		    	
+		    	//prompt the user for engagement score
+		    	System.out.print("Please enter your engagement score: ");
+		    	int engagement_score = scanint.nextInt();
+		    	
+		    	//calculate total xp score with bonuses
+		    	double total_score = l1_xp + (l1_xp * 0.20) + l2_xp + (l2_xp * 0.30) + l3_xp + (l3_xp * 0.50) + engagement_score + (engagement_score * 0.60);
+		    	
+		    	//print out gamer's info and total score with bonuses
+		    	System.out.println("Summary: ");
+		    	System.out.println("Gamer Name: " + gamer_name);
+		    	System.out.println("Level 1 XP: " + l1_xp);
+		    	System.out.println("Level 2 XP: " + l2_xp);
+		    	System.out.println("Level 3 XP: " + l3_xp);
+		    	System.out.println("Engagement Score: " + engagement_score);
+		    	System.out.println("Total Score with bonuses: " + total_score);
+		    	
+		    	//ask user again if they want to enter gamer's data
+		    	System.out.print("Would you like to enter a gamer's data? Enter Yes/No: ");
+		    	gamer_data = scanstr.nextLine();
+	    	} //end of while loop
+	    	
+	    	//create if statement for if user enters No 
+	    	if (gamer_data.equals("No")){
+	    		System.out.print("Thank you for using the Total XP calculation program!");
+	    	};
+	    }
+	    }
