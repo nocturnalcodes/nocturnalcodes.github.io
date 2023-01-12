@@ -1,4 +1,4 @@
 # nocturnalcodes.github.io
-a compilation of the files from my java project that I worked on which uses arrays and methods
+a calculator that takes input from the user on gamer data and calculates their xp plus bonuses
 
-Java library that utilizes arrays and methods to store customer data. The project and files are simple and could benefit from useful and creative additions/iterations. 
+this project is simple and could benefit from useful and creative additions/iterations. 
